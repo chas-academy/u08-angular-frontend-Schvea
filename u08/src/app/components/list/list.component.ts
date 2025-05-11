@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { ConnectService } from '../../services/connect.service';
 import { Movie } from '../../models/movie.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
-  imports: [],
+  imports: [CommonModule],
+  standalone: true,
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
