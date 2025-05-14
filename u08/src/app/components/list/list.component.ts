@@ -32,11 +32,13 @@ export class ListComponent implements OnInit{
       this.movies = data;
     });
   }
+  
   deleteMovie(id: string): void {
     this.service.delete(id).subscribe(() => this.loadMovies());
   }
 
   goToEdit(id: string): void {
+    console.log('Navigating to edit with id:', id);
     this.router.navigate(['/movie', id]);
   }
   addMovie(): void {

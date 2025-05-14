@@ -13,7 +13,9 @@ export class ConnectService {
   Read(): Observable<Movie[]> { 
     return this.http.get<Movie[]>(this.apiUrl);
   }
-
+  getOne(id: string): Observable<Movie> {
+    return this.http.get<Movie>(`${this.apiUrl}/${id}`);
+  }
   create(item: Movie): Observable<Movie> {  
     return this.http.post<Movie>(this.apiUrl, item);
   }

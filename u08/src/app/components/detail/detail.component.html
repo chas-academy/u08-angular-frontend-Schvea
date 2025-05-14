@@ -1,1 +1,25 @@
-<p>detail works!</p>
+<h2>Redigera film</h2>
+<form (ngSubmit)="updateMovie()">
+  <label>
+    Titel:
+    <input [(ngModel)]="movie.title" name="title" required />
+  </label><br />
+
+  <label>
+    Genre:
+    <input [(ngModel)]="movie.genre" name="genre" required />
+  </label><br />
+
+  <label>
+    Regissör:
+    <input [(ngModel)]="movie.director" name="director" required />
+  </label><br />
+
+  <label>
+    Skapad:
+    <input [(ngModel)]="movie.created" name="created" type="date" required />
+  </label><br />
+
+  <button type="submit">Spara ändringar</button>
+  <button type="button" (click)="router.navigate(['/'])">Avbryt</button>
+</form>
