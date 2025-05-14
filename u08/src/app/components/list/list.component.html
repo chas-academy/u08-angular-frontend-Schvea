@@ -1,5 +1,6 @@
-<h2>Lägg till ny film</h2>
+<h2>Filmer</h2>
 <form (ngSubmit)="addMovie()" #movieForm="ngForm">
+    <h3>Ny film</h3>
   <label for="title">Titel:</label>
   <input
     type="text"
@@ -39,12 +40,9 @@
   <button type="submit" [disabled]="movieForm.invalid">Lägg till film</button>
 </form>
 
-<hr />
-
-<hr />
 <ul>
   <li *ngFor="let movie of movies">
-    {{ movie.title }} – {{ movie.genre }} – {{ movie.director }}
+    {{ movie.title }}
     <button (click)="goToEdit(movie._id!)"> Redigera</button>
     <button (click)="deleteMovie(movie._id!)">Ta bort</button>
   </li>

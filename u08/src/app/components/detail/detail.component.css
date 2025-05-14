@@ -1,0 +1,23 @@
+form {
+  background-color: #eefdfe;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-bottom: 30px;
+  margin: auto;
+}
+button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: black;
+  background-color: #E0E0E0;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+h2 {
+  text-align: center;
+}
+input{
+margin: 9px;
+}
